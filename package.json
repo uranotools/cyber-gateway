@@ -1,0 +1,30 @@
+{
+  "name": "cyber-gateway",
+  "version": "1.0.0",
+  "description": "AI Security Gateway & Reverse Proxy para Canales y Servicios en Urano",
+  "main": "dist/config.js",
+  "scripts": {
+    "build": "npm run deploy",
+    "deploy": "node ./scripts/build.js",
+    "typecheck": "tsc --noEmit",
+    "stage": "node ./scripts/stage-dist.js",
+    "urano-launch": "node ./scripts/pack.js",
+    "pack": "npm run deploy && npm run urano-launch"
+  },
+  "keywords": [
+    "cybersecurity",
+    "gateway",
+    "waf",
+    "ai-defense",
+    "prompt-injection",
+    "anti-phishing",
+    "urano-plugin"
+  ],
+  "author": "Urano Cyber Defense Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "esbuild": "^0.20.2",
+    "typescript": "^5.0.0"
+  }
+}
